@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.caucho</groupId>
-  <artifactId>resin-hessian</artifactId>
+  <artifactId>hessian</artifactId>
   <packaging>jar</packaging>
-  <version>@VERSION@</version>
+  <version>4.0.37</version>
   <name>Hessian Binary Web Service</name>
   <url>http://hessian.caucho.com</url>
 
@@ -13,4 +13,14 @@
       <name>Apache License 1.0</name>
     </license>
   </licenses>
+
+   <dependencies>
+       <dependency>
+           <groupId>javax.servlet</groupId>
+           <artifactId>javax.servlet-api</artifactId>
+           <version>3.0.1</version>
+           <type>jar</type>
+           <scope>provided</scope>
+       </dependency>
+   </dependencies>
 </project>

@@ -83,7 +83,6 @@ public class HessianServlet extends HttpServlet {
   
   private HessianSkeleton _homeSkeleton;
   private HessianSkeleton _objectSkeleton;
-
   private SerializerFactory _serializerFactory;
 
   public HessianServlet()

@@ -48,6 +48,7 @@
 
 package com.caucho.hessian.io;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 
 /**
@@ -65,4 +66,21 @@ public class BigDecimalDeserializer extends AbstractStringValueDeserializer {
   {
     return new BigDecimal(value);
   }
+
+    /**
+     * fix deserializer error
+     * @param in
+     * @return
+     * @throws IOException
+     */
+    @Override
+    public Object readObject(AbstractHessianInput in) throws IOException {
+        String value = in.readString();
+
+        Object object = create(value);
+
+        in.addRef(object);
+
+        return object;
+    }
 }
